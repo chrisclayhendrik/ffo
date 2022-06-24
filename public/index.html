@@ -20,21 +20,39 @@
   <body>
     <div class="container">
       <div id="login">
-        <style>
-          #login {
-            position: fixed;
-            text-align: center;
-          }</style>
-        <h1>For Fans Of: My Spotify API App!</h1>
-        <a href="/login" class="btn btn-primary center">Log in with Spotify</a>
+        <h1>
+          <style>
+            h1 {
+              text-align: center;
+            }</style>
+            For Fans Of: My Spotify API App!</h1>
+        <a href="/login" class="btn btn-primary" id="login-button">
+          <style>
+            #login-button {
+              display: block;
+              margin: 0 auto;
+            }</style>
+            Log in with Spotify</a>
       </div>
       <div id="loggedin">
         <div id="user-profile">
         </div>
         <div id="oauth">
         </div>
-        <a href="/#" class="btn btn-primary">Refresh Playlist</a>
-        <a href="/logout" class="btn btn-primary">Logout</a>
+        
+          <a href="/#" class="btn btn-primary" id="refresh-button">
+            <style>
+              #refresh-button {
+                display: block;
+                margin: 0 auto;
+              }</style>Refresh Playlist</a>
+        
+        <a href="/logout" class="btn btn-primary" id="logout-button">
+          <style>
+            #logout-button {
+              display: block;
+              margin: 0 auto;
+            }</style>Logout</a>
       </div>
     </div>
 
@@ -53,8 +71,15 @@
           Logged in as {{display_name}}</h3>
       <div class="media">
         <div class="media-body">
-            <img class="media-object" width="150" src="{{images.0.url}}" />
-          <iframe  class="media-object" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZEVXcUU5IE4dCG4w?utm_source=generator" width="200%" height="480" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+          <style>
+            #profile-picture {
+              display: block;
+              margin: 0 auto;
+            }</style>
+            <img class="media-object" width="150" src="{{images.0.url}}" id="profile-picture"/>
+            <br><br>
+          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZEVXcUU5IE4dCG4w?utm_source=generator" width="100%" height="480" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+            <br><br>
         </div>
       </div>
     </script>
