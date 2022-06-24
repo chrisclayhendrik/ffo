@@ -47,13 +47,13 @@
         <div id="oauth">
         </div>
 
-        <button class="btn btn-primary" id="obtain-new-token">
+        <!-- <button class="btn btn-primary" id="obtain-new-token">
           <style>
             #obtain-new-token {
               display: block;
               margin: 0 auto;
             }
-          </style>Obtain new token using the refresh token</button>
+          </style>Obtain new token using the refresh token</button> -->
 
         <a href="/#" class="btn btn-primary" id="refresh-button">
           <style>
@@ -101,25 +101,6 @@
     </script>
 
     <script id="oauth-template" type="text/x-handlebars-template">
-      <h2>
-        <style>
-          h2 {
-            text-align: center;
-          }</style>
-        </style>oAuth info</h2>
-
-        <h4>
-          <style>
-            h4 {
-              text-align: center;
-            }
-          </style>Access token</h4><h5 class="text-overflow">{{access_token}}</h5>
-        <h4>
-          <style>
-            h4 {
-              text-align: center;
-            }
-          </style>Refresh token</h4><h5 class="text-overflow">{{refresh_token}}</h5>
     </script>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js"></script>
