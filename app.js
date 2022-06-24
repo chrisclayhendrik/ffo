@@ -35,6 +35,8 @@
  var stateKey = 'spotify_auth_state';
  
  var app = express();
+ const port = process.env.PORT || 3000
+
  
  app.use(express.static(__dirname + '/public'))
     .use(cors())
@@ -151,6 +153,7 @@
    });
  });
  
- console.log('Listening on 8181');
- app.listen(8181);
+ app.listen(port, () => {
+  console.log(`Example app listening at http://localhost:${port}`)
+})
  //Testing
