@@ -35,11 +35,10 @@ jobs:
   login:
     runs-on: ubuntu-latest
     steps:
-
     - name: Log in with Azure
         uses: azure/login@v1
-        with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
+          with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
 
     - name: Azure CLI script
         uses: azure/CLI@v1
