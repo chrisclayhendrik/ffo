@@ -47,7 +47,7 @@
         <div id="oauth">
         </div>
 
-        <button class="btn btn-default" id="obtain-new-token">
+        <button class="btn btn-primary" id="obtain-new-token">
           <style>
             #obtain-new-token {
               display: block;
@@ -107,10 +107,19 @@
             text-align: center;
           }</style>
         </style>oAuth info</h2>
-      <dl class="dl-horizontal">
-        <dt>Access token</dt><dd class="text-overflow">{{access_token}}</dd>
-        <dt>Refresh token</dt><dd class="text-overflow">{{refresh_token}}</dd>
-      </dl>
+
+        <h4>
+          <style>
+            h4 {
+              text-align: center;
+            }
+          </style>Access token</h4><h5 class="text-overflow">{{access_token}}</h5>
+        <h4>
+          <style>
+            h4 {
+              text-align: center;
+            }
+          </style>Refresh token</h4><h5 class="text-overflow">{{refresh_token}}</h5>
     </script>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js"></script>
