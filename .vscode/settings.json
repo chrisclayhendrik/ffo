@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/d4e5f4dd-4993-4095-8431-d21fe4ff7971/microsoft.web/sites/subscriptions/d4e5f4dd-4993-4095-8431-d21fe4ff7971/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/ffo-hendrik",
+    "appService.deploySubpath": "."
+}
