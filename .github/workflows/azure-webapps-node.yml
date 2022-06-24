@@ -32,7 +32,7 @@ permissions:
   contents: read
 
 jobs:
-  login:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
     - name: Log in with Azure
