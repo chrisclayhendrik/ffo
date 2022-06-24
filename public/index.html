@@ -20,35 +20,46 @@
   <body>
     <div class="container">
       <div id="login">
-        <h1>Welcome to For Fans Of: My Spotify API App!</h1>
-        <a href="/login" class="btn btn-primary">Log in with Spotify</a>
+        <style>
+          #login {
+            position: fixed;
+            text-align: center;
+          }</style>
+        <h1>For Fans Of: My Spotify API App!</h1>
+        <a href="/login" class="btn btn-primary center">Log in with Spotify</a>
       </div>
       <div id="loggedin">
         <div id="user-profile">
         </div>
+        <div id="oauth">
+        </div>
+        <a href="/#" class="btn btn-primary">Refresh Playlist</a>
         <a href="/logout" class="btn btn-primary">Logout</a>
       </div>
     </div>
 
     <script id="user-profile-template" type="text/x-handlebars-template">
-      <h1>Logged in as {{display_name}}</h1>
+      <h1>
+        <style>
+          h1 {
+            text-align: center;
+          }</style>
+          For Fans Of: My Spotify API App!</h1>
+      <h3>
+        <style>
+          h3 {
+            text-align: center;
+          }</style>
+          Logged in as {{display_name}}</h3>
       <div class="media">
-        <div class="pull-left">
-          <img class="media-object" width="150" src="{{images.0.url}}" />
-          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZEVXcUU5IE4dCG4w?utm_source=generator" width="500%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-        </div>
         <div class="media-body">
-          <dl class="dl-horizontal">
-            <dt>Display name</dt><dd class="clearfix">{{display_name}}</dd>
-            <dt>Id</dt><dd>{{id}}</dd>
-            <dt>Email</dt><dd>{{email}}</dd>
-            <dt>Spotify URI</dt><dd><a href="{{external_urls.spotify}}">{{external_urls.spotify}}</a></dd>
-            <dt>Link</dt><dd><a href="{{href}}">{{href}}</a></dd>
-            <dt>Profile Image</dt><dd class="clearfix"><a href="{{images.0.url}}">{{images.0.url}}</a></dd>
-            <dt>Country</dt><dd>{{country}}</dd>
-          </dl>
+            <img class="media-object" width="150" src="{{images.0.url}}" />
+          <iframe  class="media-object" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZEVXcUU5IE4dCG4w?utm_source=generator" width="200%" height="480" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
         </div>
       </div>
+    </script>
+
+    <script id="oauth-template" type="text/x-handlebars-template">
     </script>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js"></script>
@@ -73,6 +84,10 @@
         var userProfileSource = document.getElementById('user-profile-template').innerHTML,
             userProfileTemplate = Handlebars.compile(userProfileSource),
             userProfilePlaceholder = document.getElementById('user-profile');
+
+        var oauthSource = document.getElementById('oauth-template').innerHTML,
+            oauthTemplate = Handlebars.compile(oauthSource),
+            oauthPlaceholder = document.getElementById('oauth');
 
         var params = getHashParams();
 
