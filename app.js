@@ -15,7 +15,7 @@
  
  var client_id = '16f5aad2e22447e88a6c70bf6c0b7d08'; // Your client id
  var client_secret = '0af551724c4f4542a2a74d6d83ad9a4f'; // Your secret
- var redirect_uri = 'http://localhost:8888/callback'; // Your redirect uri
+ var redirect_uri = 'https://ffo-hendrik.azurewebsites.net/callback'; // Your redirect uri
  
  /**
   * Generates a random string containing numbers and letters
