@@ -12,6 +12,6 @@
         "request": "~2.83.0"
     },
     "scripts": {
-        "start": "pm2 start app.js --no-daemon"
+        "start": "node app.js"
     }
 }
